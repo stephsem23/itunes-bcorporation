@@ -1,0 +1,14 @@
+<h1>iBook Lookup - Search by 13 digit ISBN Number (*no dashes)</h1>
+
+<%= form_tag books_path, method: :get do %>
+  <%= text_field_tag :q %>
+  <%= submit_tag "search" %>
+<% end %>
+
+<h2> Results for <%= params[:q] || "9780316069359" %></h2>
+
+<ol>
+  <% for book in @books %>
+  <li><%= image_tag book[:artworkUrl100] %><%= book[:trackName] %><a href="<%= book[:trackViewUrl] %>" target="_blank">View in Itunes</a></li>
+  <% end %>
+</ol>

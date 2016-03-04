@@ -1,0 +1,14 @@
+<h1>5 Most Recent Movies - Search by Actors' Name</h1>
+
+<%= form_tag movies_path, method: :get do %>
+  <%= text_field_tag :q %>
+  <%= submit_tag "search" %>
+<% end %>
+
+<h2> Results for <%= params[:q] || "leonardo di caprio" %></h2>
+
+<ol>
+  <% for movie in @movies %>
+  <li><%= image_tag movie[:artworkUrl100] %><%= movie[:trackName] %><a href="<%= movie[:trackViewUrl] %>" target="_blank">View in Itunes</a></li>
+  <% end %>
+</ol>
