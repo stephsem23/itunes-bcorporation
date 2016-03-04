@@ -1,6 +1,6 @@
 <div class="section no-pad-bot" id="index-banner">
     <div class="container">
-      <h4>5 Most Recent Movies - Search by Actors' Name</h4>
+      <h4>5 Recent Movies - Search by Actor's Name</h4>
 
       <%= form_tag movies_path, method: :get do %>
         <%= text_field_tag :q %>
@@ -14,7 +14,7 @@
 
       <ol>
         <% for movie in @movies %>
-        <li><%= image_tag movie[:artworkUrl100] %><%= movie[:trackName] %><a href="<%= movie[:trackViewUrl] %>" target="_blank">View in Itunes</a></li>
+        <li><%= image_tag movie[:artworkUrl100] %><%= movie[:trackName] %><br><a href="<%= movie[:trackViewUrl] %>" target="_blank">View In Itunes</a></li><br>
         <% end %>
       </ol>
     </div>

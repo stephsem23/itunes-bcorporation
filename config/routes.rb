@@ -2,5 +2,5 @@ Rails.application.routes.draw do
   resources :tracks
   resources :books
   resources :movies
-  root 'tracks#index'
+  root 'home#index'
 end

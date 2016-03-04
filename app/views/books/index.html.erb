@@ -10,12 +10,24 @@
       </button>
       <% end %>
       <br>
-      <h5> Result for <%= params[:q] || "9780316069359" %></h5>
+      <h5> Result for ISBN <%= params[:q] || "9780062073501" %></h5>
 
-      <ol>
+      <ul>
         <% for book in @books %>
-        <li><%= image_tag book[:artworkUrl100] %><%= book[:trackName] %><a href="<%= book[:trackViewUrl] %>" target="_blank">View in Itunes</a></li>
+        <li><%= image_tag book[:artworkUrl100] %></li>
+        <li><%= book[:trackName] %></li>
+        <li><a href="<%= book[:trackViewUrl] %>" target="_blank">View In Itunes</a></li>
         <% end %>
-      </ol>
+      </ul>
+
+      <br>
+      <hr>
+      <h6>Can't find you favorite book? Discover these suggestions:
+
+      <ul>
+        <li>9780316069359</li>
+        <li>9781443419789</li>
+      <ul>
+
     </div>
 </div>
