@@ -16,7 +16,14 @@
 
         <ol>
           <% for track in @tracks %>
-          <li><%= image_tag track[:artworkUrl60] %><%= track[:trackName] %><br><a href="<%= track[:previewUrl] %>" target="_blank">Preview Song</a></li><br>
+          <li>
+            <%= image_tag track[:artworkUrl60] %>
+            <br>
+            <%= track[:trackName] %>
+            <br>
+            <a href="<%= track[:previewUrl] %>" target="_blank">Preview Song</a>
+          </li>
+          <br>
           <% end %>
         </ol>
     </div>

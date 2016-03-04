@@ -16,7 +16,14 @@
 
       <ol>
         <% for movie in @movies %>
-        <li><%= image_tag movie[:artworkUrl100] %><%= movie[:trackName] %><br><a href="<%= movie[:trackViewUrl] %>" target="_blank">View In Itunes</a></li><br>
+        <li>
+          <%= image_tag movie[:artworkUrl100] %>
+          <br>
+          <%= movie[:trackName] %>
+          <br>
+          <a href="<%= movie[:trackViewUrl] %>" target="_blank">View In Itunes</a>
+        </li>
+        <br>
         <% end %>
       </ol>
     </div>

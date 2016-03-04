@@ -12,6 +12,20 @@
 
       <br>
 
+      <h5>You may test this app by using one of the following ISBN numbers below:
+
+      <ul>
+        <strong>
+          <li>9780316069359</li>
+          <li>9781443419789</li>
+          <li>9780062073501</li>
+        </strong>
+      <ul>
+      
+      </h5>
+
+      <hr>
+
       <h5> Result for ISBN <%= params[:q] || "9780062073501" %></h5>
 
       <ul>
@@ -21,16 +35,6 @@
         <li><a href="<%= book[:trackViewUrl] %>" target="_blank">View In Itunes</a></li>
         <% end %>
       </ul>
-
-      <br>
-
-      <hr>
-
-      <h6>Can't find you favorite book? Discover these suggestions:
-      <ul>
-        <li>9780316069359</li>
-        <li>9781443419789</li>
-      <ul>
 
     </div>
 </div>
