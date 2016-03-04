@@ -15,8 +15,3 @@
 //= require turbolinks
 //= require_tree .
 
-$( document ).ready(function(){
-
-    $('.button-collapse').sideNav();
-
-  }); // end of document ready
